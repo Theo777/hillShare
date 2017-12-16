@@ -1,0 +1,154 @@
+{
+"data":[
+[
+"Neil",
+"why no work"
+],
+
+[
+"System",
+"theo77 would like to join the group"
+],
+
+[
+"Neil",
+"please god please have mercy"
+],
+
+[
+"Neil",
+"please god please have mercy"
+],
+
+[
+"Neil",
+"were so stupid"
+],
+
+[
+"Neil",
+"please dear god"
+],
+
+[
+"theo77",
+"Hey"
+],
+
+[
+"Neil",
+"Dogs are better than cats"
+],
+
+[
+"theo77",
+"Hey "
+],
+
+[
+"System",
+"{"py/object": "user.User", "profPic": "static/dog.png", "studentEmail": "nfitzgerald1@stonehill.edu", "userid": "Neil", "member": "the best group\nthe best group\nthe best group\nCS final project\nCS final project\nCS final project\nTheo 76's group", "password": "csc101"} would like to join the group"
+],
+
+[
+"System",
+"{"py/object": "user.User", "profPic": "static/dog.png", "studentEmail": "nfitzgerald1@stonehill.edu", "userid": "Neil", "member": "the best group\nthe best group\nthe best group\nCS final project\nCS final project\nCS final project\nTheo 76's group", "password": "csc101"} would like to join the group"
+],
+
+[
+"System",
+"{"py/object": "user.User", "profPic": "static/dog.png", "studentEmail": "nfitzgerald1@stonehill.edu", "userid": "Neil", "member": "the best group\nthe best group\nthe best group\nCS final project\nCS final project\nCS final project\nTheo 76's group", "password": "csc101"} would like to join the group"
+],
+
+[
+"System",
+"{"py/object": "user.User", "profPic": "static/dog.png", "studentEmail": "nfitzgerald1@stonehill.edu", "userid": "Neil", "member": "the best group\nthe best group\nthe best group\nCS final project\nCS final project\nCS final project\nTheo 76's group", "password": "csc101"} would like to join the group"
+],
+
+[
+"System",
+"{"py/object": "user.User", "profPic": "static/dog.png", "studentEmail": "nfitzgerald1@stonehill.edu", "userid": "Neil", "member": "the best group\nthe best group\nthe best group\nCS final project\nCS final project\nCS final project\nTheo 76's group", "password": "csc101"} would like to join the group"
+],
+
+[
+"System",
+"{"py/object": "user.User", "profPic": "static/dog.png", "studentEmail": "nfitzgerald1@stonehill.edu", "userid": "Neil", "member": "the best group\nthe best group\nthe best group\nCS final project\nCS final project\nCS final project\nTheo 76's group", "password": "csc101"} would like to join the group"
+],
+
+[
+"System",
+"{"py/object": "user.User", "profPic": "static/cat.png", "studentEmail": "theoslepski@yahoo.com", "userid": "theo77", "member": "the best group\nCS final project", "password": "pizzaman"} would like to join the group"
+],
+
+[
+"Neil",
+"working?"
+],
+
+[
+"Neil",
+"aaaaaaaaaaahhhhhhhhhhhh!!!!!!!!!!!"
+],
+
+[
+"theo77",
+"hell"
+],
+
+[
+"theo77",
+"whats up"
+],
+
+[
+"theo77",
+"Hey neil"
+],
+
+[
+"Neil",
+"did this works"
+],
+
+[
+"theo77",
+"whats up"
+],
+
+[
+"theo77",
+"Hey neil
+"
+],
+
+[
+"theo77",
+"Hey man"
+],
+
+[
+"theo77",
+"Hey neil"
+],
+
+[
+"Neil",
+"working?"
+],
+
+[
+"Neil",
+"does it work?"
+],
+
+[
+"theo77",
+"hey neil"
+],
+
+[
+"Neil",
+"hi theo"
+]
+]
+}

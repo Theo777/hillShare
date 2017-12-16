@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+</head>
+<body>
+  <!-- Created by William Melahouris, Neil Fitzgerald, Theo Slepski -->
+<!-- This is the View Group screen for hillShare -->
+<html>
+    <head>
+        <title>hillShare View Group</title>
+        <link rel = 'stylesheet'  type="text/css" href = "{{ url_for('static', filename='final_project.css') }}" />
+	<script type="text/javascript"> var $SCRIPT_ROOT = "http://52.38.192.147:5000" </script>	
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script
+	
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+
+<script src="{{ url_for('static', filename='table.js') }}"></script>       
+ <div id="container">   <!-- The container div for the login screen -->
+            <header>    
+                <h1 class="split-para">hillShare<span>Stonehill College</span></h1>
+            </header>
+            <nav>
+                <ul class="split-para2">
+                    <li><a class="active" href="/home">Home</a></li>
+                    <li><a href="/lookup">Look Up Events</a></li>
+                    <li><a href="/create">New Group</a></li>
+		    <li><a href="/groupsearch">Search Groups</a></li>
+                    <li id="usergreeting"><span id="hellospan"><img src={{user.profPic}} alt="profilepic" height="40" width="40" align="left"/>  Hello, {{user.userid}}<br>&nbsp;&nbsp;&nbsp;<a class="signoutlink" href="/login">Sign Out</a></span></li>
+                </ul>
+            </nav>
+	   
+	    
+            <article>
+                <div class="viewgroupdiv">
+                    <header class="loginheader">
+                            <h2>{{  groupname.name  }}</h2>
+                    </header>
+		    <img src="/static/main_message_icon.png" alt="View Group Icon" height="100" width="100" style="float: left; padding: 10px;" />
+		    <div id="addNewUser" style="text-align: right; padding-right: 10px;">
+		      <form id="newUserform" method="post" >
+			<p>Add User to Group <input type='text' name='newUser' /></p>
+			<p><input class="submitbutton" type="submit" name="submitnewmessage" value="Add New User" ><p>
+		      </form>
+		    </div><br>
+		    
+		    <p class="descriptionpara"><b>Description:</b> {{groupname.description}}</p>
+                        <table class="messagetable" id="table" align="center">
+			  <thead>
+                          <tr>
+                            <th class="postedbyblock">Posted By:</th>
+                            <th class="messageblock">Message:</th> 
+                        </tr>
+                          </thead>
+			  <tbody>
+                      		{% for message in messages %}
+				<tr>
+				<td class="postedbyblock">{{message.username}}</td>
+				<td class="messageblock"> {{message.mess}}</td>
+				</tr>
+				{%endfor%}
+			  </tbody>
+                    </table>
+                    <p class="descriptionpara"><b>Enter A New Message Below...</b></p>
+                    
+                    
+
+                    
+                    <form id="form" method="post" >
+			<textarea class="newMessageTextArea" name="textvalue"  placeholder='Enter New Message Here...'></textarea>
+                        <p><input class="submitbutton" type="submit" name="submitnewmessage"   value="Add New Message"  ></p>
+                    </form>
+			                    <div class="createeventdiv">
+                        <header class="loginheader">
+                            <h2>Create New Event</h2>
+                        </header>
+                        
+                        <img class="loginimage2" src="/static/event_icon.png" alt="Event Image" height="115" width="115"/>
+                    
+                        
+                        <h3>Please Enter The Following Event Information:</h3>
+
+                        <form id="form2" method="post">
+                            <label>Name: </label><input type='text' name='eventname' /><br><br>
+                            <label>Description: </label><input type='text' name='eventdescription'/><br><br>
+                            <label>Start Time: </label><input type="datetime-local" name="starttime"><br><br>
+                            <label>End Time: </label><input type="datetime-local" name="endtime">
+                            <p><input class="submitbutton" type="submit" name="submitnewmessage"   value="Create Event"  ></p>
+                        </form>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <footer>
+                <small>Copyright &copy; 2017, hillShare. All Rights Reserved.</small>
+            </footer>
+
+        </div>
+    </body>
+</html>

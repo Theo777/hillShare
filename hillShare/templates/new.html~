@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- Created by William Melahouris, Neil Fitzgerald, Theo Slepski -->
+<!-- This is the Login screen for hillShare -->
+
+<html>
+    <head>
+        <title>hillShare Create Account</title>
+<link rel = 'stylesheet'  type="text/css" href = "{{ url_for('static', filename='final_project.css') }}" /> 
+
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="container">   <!-- The container div for the login screen -->
+
+            <header>    
+                <h1 class="split-para">hillShare<span>Stonehill College</span></h1>
+            </header>
+
+            <article>
+
+
+                <div id="logindescriptiondiv">
+                    <img class="loginimage" src="static/main_message_icon.png" alt="Login Image" height="200" width="200" />
+                    <h2>Create an Account</h2>
+                    <p>Please enter a valid username, password, and your email address. Choose a profile picture for your account as well.</p>
+                    <p>Return to <a href='/login'>Login</a></p>
+                </div>
+
+                <div id="createaccountdiv">
+                    <header class="loginheader">
+                        <h2>Create Account</h2>
+                    </header>
+
+                    <h3>Please Enter The Following Information:</h3>
+
+                    <form id="form" method="post" >
+                        <label>Username: </label><input type='text' name='userid1' /><br><br>
+                        <label>Password: </label><input type='password' name='password1' /><br><br>
+                        <label>Email Address: </label><input type='text' name='emailaddress' /><br><br>
+                        <label>Profile Picture: </label>
+                        <select id='picturelist' onchange='setPicture()' name='pic'>
+                            <option value="static/default.png">Default</option>
+                            <option value="static/star.png">Star</option>
+                            <option value="static/dog.png">Dog</option>
+                            <option value="static/cat.png">Cat</option>
+                            <option value="static/skyhawk.png">Skyhawk</option>
+                        </select>
+                        <p>Preview: &nbsp &nbsp<img id='imagepreview' src='static/default.png' alt='Profile Picture Preview' height='100' width='100' /></p>
+                        
+                        <!-- This changes the picture when the user makes a dropdown selection... -->
+                        <!-- This should go in a Javascript .js file instead, but so far it's the only place we use Javascript. -->
+                        <script type='text/javascript'>
+                            function setPicture() {
+                                var img = document.getElementById("imagepreview");
+                                img.src = this.value;
+                                return false;
+                            }
+                            document.getElementById("picturelist").onchange = setPicture;
+                        </script>
+
+                        <p><input class="submitbutton" type="submit" name="submitnew"   value="submit"  ></p>
+                    </form>
+
+
+                </div>
+
+            </article>
+
+
+
+
+
+
+        </div>
+    </body>
+</html>

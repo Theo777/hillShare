@@ -1,0 +1,69 @@
+
+theo77
+1
+Sorry
+You have no new messages.
+<END>
+Email From: slepskje@yahoo.com
+GET 100s!
+<END>
+theo88 
+Email From: slepskje@yahoo.com
+HELLO theo
+Email From: theos@amazon.com
+Order more packages!
+Email From: theos@amazon.com
+Order more packages!
+Email From: theos@amazon.com
+Order more packages!
+Email From: theos@amazon.com
+Order more packages!
+<END>
+theoslepski
+Email From: thecloud@yahoo.com
+ZZZZ!
+Email From: goredsox@redsox.com
+go sox!
+Email From: thedarside@starwars.com
+COME!
+Email From: theos@amazon.com
+Your packagesare here!
+Email From: theos@amazon.com
+Order more packages!
+<END>
+        else:
+                temp=0
+                numtemp=''
+                j=-1
+                box=open(useridto+'.txt','r')
+                lines=box.readlines()
+
+                for line in lines:
+                        if j>=0:
+                                if line.strip()=='<END>':
+                                        temp=j
+                                elif j%3==0:
+                                        numtemp=line.strip()
+                        j=j+1
+                box.close()
+                print temp
+                print numtemp
+                bo=open (useridto+'.txt','r')
+                i=bo.readlines()
+                bo.close()
+                b=open(useridto+'.txt','w')
+                count=0
+                for line in i:
+                        if count == temp+1:
+                                numtemp=numtemp.strip()
+                                etemp=int(numtemp)
+                                etemp=etemp+1
+                                etemp=str(etemp)
+                                b.write(etemp+'\n')
+                                b.write("Email From: "+userid+'\n')
+                                b.write(message+'\n')
+                                b.write(line)
+                        else:
+                                b.write(line)
+                        count=count+1
+

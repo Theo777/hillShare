@@ -1,0 +1,11 @@
+class Group:
+	def __init__(self, name, description, members):
+		self.name=name
+		self.description=description
+                self.members=members
+		
+		
+	def toString(self):
+		return self.name+" "+self.description+" "+self.members
+		
+	

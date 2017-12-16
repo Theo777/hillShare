@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- Created by William Melahouris, Neil Fitzgerald, Theo Slepski -->
+<!-- This is the Login screen for hillShare -->
+
+<html>
+    <head>
+        <title>hillShare Create a Group</title>
+      <link rel = 'stylesheet'  type="text/css" href = "{{ url_for('static', filename='final_project.css') }}" /> 
+
+ <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="container">   <!-- The container div for the login screen -->
+	  
+            <header>    
+                <h1 class="split-para">hillShare<span>Stonehill College</span></h1>
+            </header>
+
+            <nav>
+
+                <ul class="split-para2">
+                    <li><a class="active" href="/home">Home</a></li>
+                    <li><a href="/lookup">Look Up Events</a></li>
+                    <li><a href="/create">New Group</a></li>
+           	     <li><a href="/groupsearch">Search for Groups</a></li>
+                    <li id="usergreeting"><span id="hellospan"><img src={{user.profPic}} alt="profilepic" height="40" width="40" align="left"/>  Hello, {{user.userid}}<br>&nbsp;&nbsp;&nbsp;<a class="signoutlink" href="/login">Sign Out</a></span></li>
+                </ul>
+
+            </nav>
+            <article>
+
+                <div id='creategroupdiv'>
+                    <div class='newgroupinfodiv'>
+                        <header class="loginheader">
+                            <h2>Create a Group</h2>
+                        </header>
+                        <img class="loginimage2" src='static/create_group_icon.png' alt='Create Group Icon' height='115' width='115' />
+                        <h3>Please Enter the Following:</h3>
+
+                        <form id="form" method="post" >
+                            <label>Name: </label><input type='text' name='name' /><br><br>
+                            <label>Description: </label><input type='text' name='description'/><br><br>
+                            
+                            <span>Finally, enter the first message of your group:</span><br><br>
+
+                            <textarea class="newGroupTextArea" name='mess' placeholder='Enter First Message Here...'></textarea>
+
+                            <p><input class="submitbutton" type="submit" name="submitnewgroup"   value="Create Group"  ></p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+	    <footer>
+	      <small>Copyright &copy; 2017, hillShare. All Rights Reserved.</small>
+	    </footer>
+	    
+                          
+             </body>
+</html>

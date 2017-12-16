@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!-- Created by William Melahouris, Neil Fitzgerald, Theo Slepski -->
+<!-- This is the Events screen for hillShare -->
+
+<html>
+    <head>
+        <title>hillShare Events</title>
+                <link rel = 'stylesheet'  type="text/css" href = "{{ url_for('static', filename='final_project.css') }}" /> 
+
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="container">   <!-- The container div for the login screen -->
+
+            <header>    
+                <h1 class="split-para">hillShare<span>Stonehill College</span></h1>
+            </header>
+
+            <nav>
+
+                <ul class="split-para2">
+                    <li><a href="/home">Home</a></li>
+                    <li><a class="active" href="/lookup">Look Up Events</a></li>
+                    <li><a href="/create">New Group</a></li>
+                    <li><a href="/groupsearch">Find Groups</a></li>
+               
+                    <li id="usergreeting"><span id="hellospan"><img src={{user.profPic}} alt="profilepic" height="40" width="40" align="left"/>&nbsp;&nbsp;Hello, {{user.userid}}<br>&nbsp;&nbsp;&nbsp;<a class="signoutlink" href="/login">Sign Out</a></span></li>
+                </ul>
+
+            </nav>
+
+            <article>
+
+                <div class="vieweventsdiv">
+                    <header class="loginheader">
+                        <h2>All Events</h2>
+                    </header>
+
+                    <img class="loginimage2" src="/static/event_icon.png" alt="Event Image" height="115" width="115"/>
+
+                    <h3>Here is a list of all Events that have been posted:</h3>
+
+                    <table class="eventtable">
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Description</th> 
+                            <th>Start Date/Time</th>
+                            <th>End Date/Time</th>
+                        </tr>
+                       			{% for Event in events %}
+                        <tr>
+                            <td>{{Event.name}}</td>
+                            <td>{{Event.description}}</td>
+                            <td>{{Event.month}}/{{Event.day}}/{{Event.year}}  {{Event.startTime}}</td>
+                            <td>{{Event.endMonth}}/{{Event.endDay}}/{{Event.endYear}}  {{Event.endTime}}</td>
+			</tr>
+			{% endfor %}
+                    </table>
+
+
+                </div>
+
+
+            </article>
+
+            <footer>
+                <small>Copyright &copy; 2017, hillShare. All Rights Reserved.</small>
+            </footer>
+
+        </div>
+    </body>
+</html>

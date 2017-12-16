@@ -1,0 +1,85 @@
+import dataset
+import time
+from HillshareEvent import Event
+from operator import attrgetter
+
+
+class EventDao:
+	def __init__(self, ):
+		self.connectString= 'sqlite:///Event.db'
+		self.db = dataset.connect(self.connectString)
+		self.table = self.db['Event']
+		
+	def rowToEvent(self,row):
+		event = Event(row['day'], row['month'], row['year'], row['endDay'], row['endMonth'], row['endYear'], row['startTime'], row['endTime'], row['name'], row['description'], row['group'], row['tags'])
+		return event
+	
+	def eventToRow(self, event):
+		row = dict(day=event.day, month=event.month, year=event.year, endDay=event.endDay, endMonth=event.endMonth, endYear=event.endYear, startTime=event.startTime, endTime=event.endTime, name=event.name, description=event.description, group=event.group, tags=event.tags)
+		return row
+		
+	def selectByName(self,name):
+		rows = self.table.find(name=name)
+		result=[]
+		
+		if (rows is None):
+			print('MessageDao: selectByID failed to find Message with ID '+ID+' and filename '+ filename)
+			result= None
+		else:
+			count=0
+			for row in rows:
+					result.append(self.rowToEvent(row))
+					count = count + 1
+					
+		return result
+			
+	def insertEvent(self, event):
+		self.table.insert(self.eventToRow(event))
+		self.db.commit()
+		
+			
+	def selectAll(self):
+		table =self.db['Event']
+		rows =table.all()
+		
+		result = []
+		for row in rows:
+			result.append(self.rowToEvent(row))
+			
+		return sorted(result ,key= attrgetter('year','month','day','startTime'))
+		
+	def sort(self):
+		sorted(self.table, key="name")
+		self.db.commit()
+		
+	
+	def Expire(self):
+		events = self.selectAll()
+		currentDate = time.strftime("%x")
+		currentTime = time.strftime("%X") 
+		currentMonth, currentDay, currentYear = currentTime.split("/")		
+		eventsToday = []
+		for Event in events:
+			if(Event.endDay==currentDay and Event.endMonth==currentMonth and Event.endYear==currentYear):
+			        eventsToday.append(Event)
+				
+		for Event in eventsToday:
+			if(cuurentTime > Event.endTime):
+                                self.table.delete(name=event.name)
+				
+		self.db.commit()
+				
+	def insert(self, event):
+		self.table.insert(self.eventToRow(event))
+		self.db.commit()
+	
+	def update(self, event):
+		self.table.update(self.eventToRow(event),['username'])
+		self.db.commit()
+		
+	def delete(self, event):
+		self.table.delete(name=event.name)
+		self.db.commit()
+		
+	def populate(self):
+		self.db.commit()

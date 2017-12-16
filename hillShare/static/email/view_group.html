@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<!-- Created by William Melahouris, Neil Fitzgerald, Theo Slepski -->
+<!-- This is the View Group screen for hillShare -->
+
+<html>
+    <head>
+        <title>hillShare View Group</title>
+        <link rel="stylesheet" type="text/css" href="final_project.css" />
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="container">   <!-- The container div for the login screen -->
+
+            <header>    
+                <h1 class="split-para">hillShare<span>Stonehill College</span></h1>
+            </header>
+
+            <nav>
+
+                <ul class="split-para2">
+                    <li><a class="active" href="/home">Home</a></li>
+                    <li><a href="/lookup">Look Up Events</a></li>
+                    <li><a href="/create">New Group</a></li>
+                    <li><a href="/login">Sign Out</a></li>
+                    <li id="usergreeting"><span id="hellospan"><img src="skyhawk.jpg" alt="profilepic" height="40" width="40" align="left"/>&nbsp;&nbsp;Hello, Username<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="signoutlink" href="/login">Sign Out</a></span></li>
+                </ul>
+
+            </nav>
+
+            <article>
+                <div class="viewgroupdiv">
+                    <header class="loginheader">
+                            <h2>Computer Science Group</h2>
+                    </header>
+                    <p class="descriptionpara"><b>Description:</b> This is a group that discusses Computer Science. Post any questions that you have as well as any facts you know about Computer Science.</p>
+                    <p class="descriptionpara"><b>Created By:</b> wmelahouris</p>
+                    <table align="center">
+                        <tr>
+                            <th class="postedbyblock">Posted By:</th>
+                            <th class="messageblock">Message:</th> 
+                        </tr>
+                        
+                        <!-- for loop starts here for the each message in the group -->
+                        <tr>
+                            <td class="postedbyblock"><img src="skyhawk.jpg" alt="userpic" height="100" width="100" /><br>wmelahouris</td>
+                            <td class="messageblock">
+                                <span>First line of message</span><br>
+                                <span>Second line of message</span><br>
+                                <span>Third line of message</span><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="postedbyblock"><img src="dog.jpg" alt="userpic" height="100" width="100" /><br>tslepski</td>
+                            <td class="messageblock">
+                                <span>First line of message</span><br>
+                                <span>Second line of message</span><br>
+                                <span>Third line of message</span><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="postedbyblock"><img src="star.png" alt="userpic" height="100" width="100" /><br>nfitzgerald</td>
+                            <td class="messageblock">
+                                <span>First line of message</span><br>
+                                <span>Second line of message</span><br>
+                                <span>Third line of message</span><br>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    
+                    <p class="descriptionpara"><b>Enter A New Message Below...</b></p>
+                    
+                    <textarea class="newMessageTextArea" placeholder='Enter New Message Here...'></textarea>
+
+                    
+                    <form id="form" method="post" action="/view">
+                        <p><input class="submitbutton" type="submit" name="submitnewmessage"   value="Add New Message"  ></p>
+                    </form>
+
+                </div>
+
+            </article>
+
+            <footer>
+                <small>Copyright &copy; 2017, hillShare. All Rights Reserved.</small>
+            </footer>
+
+        </div>
+    </body>
+</html>

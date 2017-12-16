@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- Created by William Melahouris, Neil Fitzgerald, Theo Slepski -->
+<!-- This is the Group Search Results screen for hillShare -->
+
+<html>
+    <head>
+        <title>hillShare Group Search Results</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='final_project.css')}}" />
+	<script type="text/javascript"> var $SCRIPT_ROOT = "http://52.38.192.147:5000" </script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script
+											
+        <meta charset="UTF-8">
+    </head>
+    <body>
+      <script src="{{ url_for('static', filename='search.js') }}"></script>
+        <div id="container">   <!-- The container div for the login screen -->
+
+            <header>    
+                <h1 class="split-para">hillShare<span>Stonehill College</span></h1>
+            </header>
+
+            <nav>
+
+                <ul class="split-para2">
+                    <li><a class="active" href="/home">Home</a></li>
+                    <li><a href="/lookup">Look Up Events</a></li>
+                    <li><a href="/create">New Group</a></li>
+                    <li><a href="/groupsearch">Search for Groups</a></li>
+                    <li id="usergreeting"><span id="hellospan"><img src={{user.profPic}} alt="profilepic" height="40" width="40" align="left"/>&nbsp;&nbsp;Hello, {{user.userid}}<br>&nbsp;&nbsp;&nbsp;<a class="signoutlink" href="/login">Sign Out</a></span></li>
+                </ul>
+
+            </nav>
+
+            <article>
+
+
+                <div id="logindescriptiondiv">
+                    <img class="loginimage" src="/static/earth_icon.png" alt="Search Image" height="200" width="200" />
+                    <h2>Search for Groups</h2>
+                    <p>Here are the Groups that you searched for.</p>
+                    <p>To join a Group, click the Join button to submit a request. The author of the group will have to add you.</p>
+                </div>
+
+                <div id="searchgroupdiv">
+                    <header class="loginheader">
+                        <h2>Group Search Results</h2>
+                    </header>
+
+                    <h2>Groups you searched for:</h2>
+
+                    <table id="table1" class="homegrouptable" align="center">
+		      <thead>
+		      <tr>
+                            <th>Name</th>
+                            <th>Description</th> 
+                            <th>Request</th>
+                      </tr>
+		      </thead>
+                        {% for Group in groups %}
+                        <tr id={{Group.name}}>
+                            <td>{{Group.name}}</td>
+                            <td>{{Group.description}}</td> 
+                            <td><img class="joinimage" src="/static/join_icon.png" alt="Request To Join Button" height="40" width="80" /></td>
+                        </tr>
+			{% endfor %}
+                    </table>
+                    
+                    <br>
+                    
+                </div>
+
+            </article>
+
+            <footer>
+                <small>Copyright &copy; 2017, hillShare. All Rights Reserved.</small>
+            </footer>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- Created by William Melahouris, Neil Fitzgerald, Theo Slepski -->
+<!-- This is the Home Page screen for hillShare -->
+
+<html>
+    <head>
+
+      <title>hillShare Home Page</title>
+        <link rel = 'stylesheet'  type="text/css" href = "{{ url_for('static', filename='final_project.css') }}" /> 
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="container">   <!-- The container div for the login screen -->
+
+            <header>    
+                <h1 class="split-para">hillShare<span>Stonehill College</span></h1>
+            </header>
+
+            <nav>
+
+                <ul class="split-para2">
+                    <li><a class="active" href="/home">Home</a></li>
+                    <li><a href="/lookup">Look Up Events</a></li>
+                    <li><a href="/create">New Group</a></li>
+                   <li><a href="/groupsearch">Search for Groups</a></li>
+                    <li id="usergreeting"><span id="hellospan"><img src='{{user.profPic}}' alt="profilepic" height="40" width="40" align="left"/>&nbsp;&nbsp;Hello, {{user.userid}}<br>&nbsp;&nbsp;&nbsp;<a class="signoutlink" href="/login">Sign Out</a></span></li>
+                </ul>
+
+            </nav>
+
+            <article>
+                <div class="profilediv">
+                    <div class="profileinfodiv">
+                        <header class="loginheader">
+                            <h2>User Profile</h2>
+                        </header>
+                        <img class="profileimage" src='{{user.profPic}}' alt="Profile Picture" height="125" width="125" />
+                        <p><b>Username:</b> {{user.userid}}</p>
+                        <p><b>Email:</b> {{user.studentEmail}}</p>
+                    </div>
+                    <img src="static/home_image.png" alt="Home Page Icon" height="150" width="150" />
+
+                </div>
+
+                <div class="usergroupsdiv">
+                    <header class="loginheader">
+                        <h2>Groups You Are In:</h2>
+                    </header>
+
+                    <h3>Click on a Group you are in to view it:</h3>
+
+                    <table class="homegrouptable" align="center">
+                        <tr>
+                            <th class="authorblock">Title</th>
+                            <th class="titleblock">Description</th>
+			    <th>View Group</th>
+
+                        </tr>
+                        <form id="form" method="post">
+                        {%for grou in gro%}
+                        <tr>
+                            <td class="authorblock">{{grou.name}}</td>
+                            <td class="titleblock">{{grou.description}}</td> 
+			    <td> <input  type="submit" class="butt"   name="view"  value='{{grou.name}}'> </input></td>
+                        </tr>
+                        {%endfor%}
+			</form>
+                    </table>
+
+                    <h3>To start a new group, click on New Group.</h3>
+                    <h3>To search for Groups and Events, click on Look Up Events.</h3>
+	
+                </div>
+            </article>
+
+            <footer>
+                <small>Copyright &copy; 2017, hillShare. All Rights Reserved.</small>
+            </footer>
+
+        </div>
+    </body>
+</html>

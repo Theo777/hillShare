@@ -1,0 +1,516 @@
+/* William Melahouris, Neil Fitzgerald, Theo Slepski */
+/* CSS for hillShare */
+
+.joinimage:hover{
+    transparency: 0.8;
+}
+
+#container {
+    /* A gradient backround for the container div */
+    background:  #e6e6e6; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border: 2px solid black;  
+    font-family:"Calibri";     
+    margin: 0 auto; /* Allows the div to float in the center */ 
+    width: 98%; /* width will be 1280px */
+}
+
+header {
+    margin: 0;
+    padding: 4px;
+    border-bottom: 2px solid black;
+    color: white; /* white font */
+
+    /* A gradient background for the header */
+    background: #a15eca; /* Old browsers */
+    background: -moz-linear-gradient(top, #a15eca 0%, #7912ac 50%, #b546de 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a15eca 0%,#7912ac 50%,#b546de 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a15eca 0%,#7912ac 50%,#b546de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a15eca', endColorstr='#b546de',GradientType=0 ); /* IE6-9 */
+}
+
+/* The code below allows the header to have hillShare on the left and Stonehill College on the right */
+
+.split-para {
+    margin-left: 8px;
+}
+
+.split-para span {
+    margin-right: 8px;
+    float: right;
+}
+
+footer {
+    clear: both;
+    border-top: 2px solid black;
+    text-align: left;
+    font-size: 18px;
+    color: white; /* white font */
+    padding: 8px;
+    /* A gradient background for the footer */
+    background: #a15eca; /* Old browsers */
+    background: -moz-linear-gradient(top, #a15eca 0%, #7912ac 50%, #b546de 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a15eca 0%,#7912ac 50%,#b546de 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a15eca 0%,#7912ac 50%,#b546de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a15eca', endColorstr='#b546de',GradientType=0 ); /* IE6-9 */
+}
+
+footer a{
+    color: yellow;
+    text-decoration: none; /* removes underline of link */
+}
+
+footer a:hover{
+    color: lawngreen;
+}
+
+.footertable {
+    margin-left: auto;     /* centers all the tables */
+    margin-right: auto;
+}
+
+#logindescriptiondiv {
+    margin: 40px 0px 40px 40px;
+    width: 300px;
+    float: left;
+    text-align: center;
+    padding: 0;
+
+}
+
+#logindescriptiondiv a {
+    text-decoration: none;
+    color: blue;
+}
+
+#logindescriptiondiv a:hover {
+    color: purple;
+    text-decoration: underline;
+}
+
+#logindiv {
+    margin: 40px 40px 40px 0px; /*centers the login div */
+    border: 2px solid black;
+    width: 500px;
+    float: right;
+    /*background-color: #bfbfbf;*/
+
+    /* Adding a gradient background for the login div */
+    background: rgb(219,237,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(219,237,251,1) 0%, rgba(140,176,210,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbedfb', endColorstr='#8cb0d2',GradientType=0 ); /* IE6-9 */
+
+    text-align: center;
+    font-size: 18px;
+}
+
+.loginheader {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.loginheader h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.loginimage2 {
+    display: block;
+    margin: 20px auto; /* centers the image */
+}
+
+/* Change font-size of the submit button */
+.submitbutton {
+    font-size: 18px;
+}
+
+#logindiv a{
+    text-decoration: none;
+    color: blue;
+}
+
+#logindiv a:hover{
+    color: purple;
+    text-decoration: underline;
+}
+
+
+#createaccountdiv {
+    margin: 40px 40px 40px 0px; /*centers the login div */
+    border: 2px solid black;
+    width: 500px;
+    float: right;
+
+    /* Adding a gradient background for the create account div */
+    background: rgb(219,237,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(219,237,251,1) 0%, rgba(140,176,210,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbedfb', endColorstr='#8cb0d2',GradientType=0 ); /* IE6-9 */
+    font-size: 16px;
+    text-align: center;
+}
+
+#createaccountdiv h3 {
+    text-align: center;
+}
+
+label{
+    display:inline-block;
+    width:120px;
+
+}
+
+select {
+    font-size: 16px;
+}
+
+#imagepreview {
+    vertical-align: middle;
+    border: 2px solid black;
+}
+
+#creategroupdiv {
+    margin: 40px auto; /*centers the login div */
+    border: 2px solid black;
+    width: 50%;
+
+    /* Adding a gradient background for the create group div */
+
+    background: rgb(219,237,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(219,237,251,1) 0%, rgba(140,176,210,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbedfb', endColorstr='#8cb0d2',GradientType=0 ); /* IE6-9 */
+
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Change size of the text area for the New Group Description */
+.newGroupTextArea {
+    width: 80%;
+    height: 250px;
+    font-family:"Calibri";
+    font-size: 18px;
+    border: 2px solid black;
+}
+
+/* CSS for the Navbar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    /* Add a gradient background for the Navbar */
+    background: rgb(125,126,125); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+    font-size: 18px;
+}
+
+li {
+    float: left;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#usergreeting {
+    float:right;
+    padding: 6px;
+}
+
+#hellospan {
+    color: white;
+    padding: 6px;
+    font-size: 15px;
+}
+#hellospan img{
+    vertical-align: middle;
+    border: 2px solid purple;
+}
+
+#hellospan a:hover{
+    color: orange;
+    background: none;
+    text-decoration: none;
+}
+
+.signoutlink {
+    display: inline;
+    color: yellow;
+    text-align: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Here is CSS for the table that allows the user to view messages posted in a group... */
+
+table {
+    margin: 20px auto;  /* Center the table */
+    width: 80%;
+    background: rgb(254,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
+    font-size: 18px;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+td {
+    padding: 5px;
+    text-align: left;
+}
+th {
+    padding: 5px;
+    text-align: center;
+    color: white;
+    background: #a15eca; /* Old browsers */
+    background: -moz-linear-gradient(top, #a15eca 0%, #7912ac 50%, #b546de 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a15eca 0%,#7912ac 50%,#b546de 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a15eca 0%,#7912ac 50%,#b546de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a15eca', endColorstr='#b546de',GradientType=0 ); /* IE6-9 */
+
+}
+
+.messagetable {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    background: none;
+    border: none;
+}
+
+.messagetable td{
+    background: rgb(254,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
+
+}
+
+.messageblock {
+    width: 70%;
+
+}
+
+.postedbyblock{
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+}
+
+.postedbyblock img{
+    border: 1px solid black;
+}
+
+.viewgroupdiv {
+    margin: 40px auto; /*centers the login div */
+    border: 2px solid black;
+    width: 80%;
+
+    /* Adding a gradient background for the create group div */
+
+    background: rgb(219,237,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(219,237,251,1) 0%, rgba(140,176,210,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbedfb', endColorstr='#8cb0d2',GradientType=0 ); /* IE6-9 */
+
+    font-size: 18px;
+    text-align: center;
+}
+
+.descriptionpara {
+    margin: 20px;
+}
+
+.newMessageTextArea {
+    width: 70%;
+    height: 200px;
+    font-family:"Calibri";
+    font-size: 18px;
+    border: 2px solid black;
+}
+
+.profilediv {
+    margin: 0px 0px 15px 0px;
+    width: 35%;
+    text-align: center;
+    float: left;
+}
+
+.profileinfodiv {
+    margin: 40px 40px 40px 40px; /*centers the login div */
+    border: 2px solid black;
+    /* Adding a gradient background for the profile info div */
+    background: rgb(219,237,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(219,237,251,1) 0%, rgba(140,176,210,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbedfb', endColorstr='#8cb0d2',GradientType=0 ); /* IE6-9 */
+
+}
+
+.profileimage {
+    display: block;
+    margin: 20px auto; /* centers the image */
+    border: 5px double black;
+}
+
+.usergroupsdiv {
+    margin: 40px;
+    border: 2px solid black;
+    width: 55%;
+    float: right;
+    /* Adding a gradient background for the div containing the groups the user is in */
+    background: rgb(219,237,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(219,237,251,1) 0%, rgba(140,176,210,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbedfb', endColorstr='#8cb0d2',GradientType=0 ); /* IE6-9 */
+
+    text-align: center;
+}
+
+.homegrouptable th, td{
+    text-align: center;
+    padding: 10px;
+}
+
+.homegrouptable a{
+    color: blue;
+    text-decoration: none;
+}
+.homegrouptable a:hover{
+    color: purple;
+    text-decoration: underline;
+}
+
+.authorblock {
+    width: 35%;
+}
+.titleblock {
+    width: 65%;
+}
+
+#searchgroupdiv {
+    margin: 40px 40px 40px 0px; /*centers the login div */
+    border: 2px solid black;
+    width: 600px;
+    float: right;
+
+    /* Adding a gradient background for the create account div */
+    background: rgb(219,237,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(219,237,251,1) 0%, rgba(140,176,210,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(219,237,251,1) 0%,rgba(140,176,210,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbedfb', endColorstr='#8cb0d2',GradientType=0 ); /* IE6-9 */
+    font-size: 16px;
+    text-align: center;
+}
+
+.addnewmessagediv {
+    background: rgb(254,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
+
+    margin: 30px auto; /*centers the login div */
+    border: 2px solid black;
+    width: 60%;  
+}
+
+.createeventdiv {
+    background: rgb(254,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
+
+    margin: 30px auto; /*centers the login div */
+    border: 2px solid black;
+    width: 60%
+}
+
+.vieweventsdiv {
+    margin: 40px auto; /*centers the login div */
+    border: 2px solid black;
+    width: 80%;
+
+    /* Adding a gradient background for the View Events div */
+
+    background: #fefcea; /* Old browsers */
+    background: -moz-linear-gradient(top, #fefcea 0%, #f1da36 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fefcea 0%,#f1da36 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fefcea 0%,#f1da36 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
+    
+    font-size: 18px;
+    text-align: center;
+}
+
+.vieweventsdiv a{
+    color: blue;
+    text-decoration: none;
+}
+
+.vieweventsdiv a:hover{
+    color: purple;
+    text-decoration: underline;
+}
+
+.eventtable{
+    width: 95%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.eventtable th {
+    /* Add a gradient background for the Event Table Heading */
+    background: rgb(125,126,125); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+
+}
+
+.eventtable th, td{
+    padding: 10px;
+    text-align: center;
+}
+
+.eventtable tr:nth-child(even) {
+    background-color: #eee;
+}
+.eventtable tr:nth-child(odd) {
+    background-color:#fff;
+}
+

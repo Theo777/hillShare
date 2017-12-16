@@ -1,0 +1,28 @@
+$(document).ready(function() {
+var table = $('#table').DataTable( {
+	"order":[],
+	"columnDefs":[{
+	"targets":'no-sort',
+	"oderable":false,	
+	}]
+} );
+
+setInterval( function () {
+    $.getJSON($SCRIPT_ROOT+"/table",
+	{},
+	      // user paging is no
+
+function(data){		
+
+    console.log(data);
+    var json =JSON.stringify(data);
+    
+    $('#table').DataTable().destroy();  
+    $('#table').DataTable({
+	    "ajax":  json
+    });
+}
+	     );
+	     }, 5000 );
+}
+);

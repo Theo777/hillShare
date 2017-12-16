@@ -1,0 +1,35 @@
+0;136;0c[app.py:1423 - log_exception() ] Exception on /table [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "hillFlask.py", line 97, in table
+    app.logger.debug(jsonify(data) )
+  File "/usr/local/lib/python2.7/dist-packages/flask/json.py", line 238, in jsonify
+    indent=indent),
+  File "/usr/local/lib/python2.7/dist-packages/flask/json.py", line 126, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python2.7/json/__init__.py", line 251, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/usr/lib/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/usr/lib/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/usr/lib/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/usr/lib/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/usr/local/lib/python2.7/dist-packages/flask/json.py", line 83, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <HillshareMessage.Message instance at 0x7ffb1d3d0d88> is not JSON serializable

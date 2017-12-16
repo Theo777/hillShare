@@ -1,0 +1,88 @@
+import dataset
+from HillshareGroup import Group
+import logging
+from flask import current_app
+
+class GroupDao:
+        
+	def __init__(self):
+		self.connectString= 'sqlite:///groups.db'
+		self.db = dataset.connect(self.connectString)
+		self.table = self.db['groups']
+                try:
+                        self.logger = current_app.logger
+                except:
+                        self.logger = logging.getLogger('root')
+
+                self.logger.debug('got to ')
+		
+	def rowToGroup(self,row):
+		message= Group(row['name'], row['description'], row['members'])
+		return message
+	
+	def groupToRow(self, group):
+		row = dict(name=group.name, description=group.description, members=group.members)
+                return row
+	
+	def selectByName(self,name):
+		rows = self.table.find(name=name)
+		result=None
+		
+		if (rows is None):
+			print('MessageDao: selectByID failed to find Message with ID '+ID+' and filename '+ filename)
+			result= None
+		else:
+			count=0
+			for row in rows:
+				if (count > 0):
+					print ('BookDao: selectByISBN more than one user selected with ' + 'ID')
+					return None
+				else:
+					result = self.rowToGroup(row)
+					count = count + 1
+					
+		return result
+			
+	def insertUsertoGroup(self, username, groupName):
+		gro=self.selectByName(groupName)
+		gro.members.append(username)
+                self.db.commit()
+			
+	def selectAll(self):
+		table =self.db['groups']
+		rows =table.all()
+		
+		result = []
+		for row in rows:
+			result.append(self.groupToRow(row))
+			
+		return result
+		
+	def insert(self, group):
+		self.table.insert(self.groupToRow(group))
+		self.db.commit()
+	
+	def update(self, group):
+		self.table.update(self.groupToRow(message),['name'])
+		self.db.commit()
+
+        def addMember(self, groupname, newmember):
+                group=self.selectByName(groupname)
+                if(not group.members):
+                        group.members=newmember
+                else:
+                        group.members=group.members+'\n '+newmember
+                self.db.commit()
+		
+	def delete(self, group):
+		self.table.delete(name=group.name)
+		self.db.commit()
+		
+	def populate(self, user):
+		self.table.insert(self.groupToRow(group('group1','1',[],[])))
+		self.table.insert(self.groupToRow(group('group2','2',[],[])))
+		self.table.insert(self.groupToRow(group('group3','3',[],[])))
+		self.table.insert(self.groupToRow(group('group4','4',[],[])))
+		self.table.insert(self.groupToRow(group('group5','5',[],[])))
+		self.db.commit()
+		

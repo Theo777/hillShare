@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!-- Created by William Melahouris, Neil Fitzgerald, Theo Slepski -->
+<!-- This is the Login screen for hillShare -->
+
+<html>
+    <head>
+        <title>hillShare Login</title>
+        <link rel = 'stylesheet'  type="text/css" href = "{{ url_for('static', filename='final_project.css') }}" /> 
+
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="container">   <!-- The container div for the login screen -->
+
+            <header>    
+                <h1 class="split-para">hillShare<span>Stonehill College</span></h1>
+            </header>
+
+            <article>
+
+
+                <div id="logindescriptiondiv">
+                    <img class="loginimage" src="static/main_message_icon.png" alt="Login Image" height="200" width="200" />
+                    <h2>Welcome to hillShare</h2>
+                    <p>hillShare allows you to create group messages between your friends, classmates, and professors on any topic that you want.</p>
+                </div>
+
+                <div id="logindiv">
+                    <header class="loginheader">
+                        <h2>Login</h2>
+                    </header>
+                    <img class="loginimage2" src="static/login_image.png" alt="Login Image 2" height="115" width="115"/>
+                    <h3>Enter your Username and Password</h3>
+
+                    <form id="form" method="post" >
+                        <p>Username:   <input type='text' name='userid' /></p>
+                        <p>Password: <input type='password' name='password' /></p>
+                        <p><input class="submitbutton" type="submit" name="submit"   value="Login"  ></p>
+                    </form>
+                    
+                    <p>New to hillShare? <a href="/new">Create an Account.</a></p>
+
+                </div>
+
+            </article>
+
+        </div>
+    </body>
+</html>
